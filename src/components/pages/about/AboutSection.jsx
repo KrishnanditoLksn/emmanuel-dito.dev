@@ -7,7 +7,7 @@ const AboutDescription = () => {
             <div>
                 <div className="font-light text-black text-2xl sm:text-lg dark:text-gray-400 mb-8">
                     <h2 className="mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold text-black dark:text-black">
-                        Hi,Emmanuel Dito is here
+                        Hi,Emmanuel Krishnandito Laksana is here
                     </h2>
                     <p className="mb-4 dark:text-black  title-font sm:text-4xl text-2xl font-semibold text-black ">
                         Mobile Enthusiast;
