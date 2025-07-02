@@ -12,8 +12,8 @@ const DescriptionContent = () => {
                             Majoring Informatics with System Development as my concentration
                         </p>
                         <p className="mb-4 dark:text-black font-normal">
-                            As Informatics student, I have a curiosity in cryptography algorithms
-                            and mobile development. Hope someday I can mix them together xD
+                            As Informatics student, I have a curiosity in system development.
+                            Hope someday I can mix them together xD
                         </p>
                     </div>
                 </div>
