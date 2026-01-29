@@ -1,11 +1,11 @@
 const projectList = () => [
     {
         keyList: 1,
-        title: "Alpaca Discord bot",
+        title: "Arxi.vinder",
         subtitle: "Python",
-        description: "A bot that can use to send memes,ping user,and make jokes.Developed within 1 years",
-        image: "https://github.com/user-attachments/assets/776092ef-5823-476c-ac57-02d35919949e",
-        link: "https://github.com/KrishnanditoLksn/Alpaca",
+        description: "Paper Recommender System using Upper Confidence Bound with Content Based Filtering Approach",
+        image: "https://github.com/user-attachments/assets/c3aa2c41-fb1b-450c-aaef-f8e9a0d8fcaf",
+        link: "https://github.com/arxi-vinder/arxiv_mobile",
         category: "personal-project"
     },
     {
