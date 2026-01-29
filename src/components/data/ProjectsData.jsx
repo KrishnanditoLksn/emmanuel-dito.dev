@@ -4,7 +4,7 @@ const projectList = () => [
         title: "Arxi.vinder",
         subtitle: "Python",
         description: "Paper Recommender System using Upper Confidence Bound with Content Based Filtering Approach",
-        image: "https://github.com/user-attachments/assets/c3aa2c41-fb1b-450c-aaef-f8e9a0d8fcaf",
+        image: "https://github-production-user-asset-6210df.s3.amazonaws.com/96246664/542174624-c3aa2c41-fb1b-450c-aaef-f8e9a0d8fcaf.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260129%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260129T120916Z&X-Amz-Expires=300&X-Amz-Signature=44d0a5fea1f1e3882291ca006104e18cdae22237e1125b0f573b164b4c3fcca1&X-Amz-SignedHeaders=host",
         link: "https://github.com/arxi-vinder/arxiv_mobile",
         category: "personal-project"
     },
