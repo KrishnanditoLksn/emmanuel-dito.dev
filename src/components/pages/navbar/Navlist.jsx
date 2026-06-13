@@ -9,37 +9,38 @@ const Navlist = () => {
         setIsOpen(!isOpen)
     }
     return (
-        <div className="max-w-5xl mx-auto px-4">
-            <div className="flex items-center justify-between h-15">
-                <div className="text-[24px] text-black font-bold font-mono">Dits Dev</div>
-                <NavigationList divClassName={"ml-96 flex space-x-4 text-gray-900"}
-                                navClassName={"sticky top-0 z-10 bg-white backdrop-filter backdrop-blur-lg bg-opacity-50"}
-                                hrefClassName={"text-black font-medium"}
-                ></NavigationList>
+        <header className="sticky top-0 z-50 bg-neo-bg border-b-4 border-black py-4">
+            <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+                <div className="neo-button bg-neo-yellow text-xl">
+                    Dits Dev
+                </div>
+                
+                <div className="hidden md:block">
+                    <NavigationList 
+                        divClassName={"flex space-x-8"}
+                        hrefClassName={"text-lg font-black uppercase hover:underline decoration-4 underline-offset-4"}
+                    />
+                </div>
+
+                <button className="text-3xl md:hidden neo-button bg-white p-2" onClick={showNav} aria-hidden="true">
+                    {isOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
+                </button>
             </div>
 
-
-            {isOpen ? (
-                <button
-                    className="fixed right-[30px] fa fa-times text-3xl z-50 md:hidden"
-                    aria-hidden="true" onClick={showNav}>
-                    <AiOutlineClose></AiOutlineClose>
-                </button>
-            ) : (
-                <button className="text-3xl md:hidden ml-[350px]" onClick={showNav} aria-hidden="true">
-                    <GiHamburgerMenu></GiHamburgerMenu>
-                </button>
-            )}
-
-            <NavigationList
-                navClassName={`h-[20vh] fixed top-[0px] flex flex-col justify-around items-center w-full md:hidden bg-white z-40 duration-1000 ${
-                    isOpen ? "right-[0px]" : "right-[-100vw]"
-                } `}
-                divClassName={"flex flex-col justify-around items-center gap-[30px] "}
-                hrefClassName={"text-black"}
-            >
-            </NavigationList>
-        </div>
+            {/* Mobile Menu */}
+            <div className={`fixed inset-0 z-40 bg-neo-bg transition-transform duration-300 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
+                <div className="flex flex-col items-center justify-center h-full space-y-12">
+                    <NavigationList
+                        navClassName="w-full"
+                        divClassName={"flex flex-col items-center space-y-8"}
+                        hrefClassName={"text-4xl font-black uppercase"}
+                    />
+                    <button className="neo-button bg-neo-pink text-xl" onClick={showNav}>
+                        Close
+                    </button>
+                </div>
+            </div>
+        </header>
     )
 }
 

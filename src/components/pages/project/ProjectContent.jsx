@@ -2,48 +2,47 @@ import projectList from "../../data/ProjectsData.jsx";
 
 export default function ProjectContent() {
     return (
-        <section className="bg-white">
-            <div id="/projects"
-                 className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6 mr-42">
-                <div>
-                    <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-black">
-                            My Projects</h2>
-                    </div>
-
-                    <div className="font-black text-black">
-                        <h2 className="text-2xl font-sans font-semibold ">Discover all of my projects </h2>
-                    </div>
+        <section id="/projects" className="py-24 px-6 bg-neo-white border-y-4 border-black">
+            <div className="max-w-7xl mx-auto space-y-16">
+                <div className="space-y-4">
+                    <h2 className="text-6xl font-black uppercase tracking-tighter">
+                        My <span className="bg-neo-green px-2 border-4 border-black">Projects</span>
+                    </h2>
+                    <p className="text-2xl font-bold">Discover all of my latest work and experiments.</p>
                 </div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 mx-auto max-w-screen-xl mb-20">
-                {projectList().map((project) => (
-                    <div
-                        key={project.keyList}
-                        className="bg-white max-w-sm rounded overflow-hidden shadow-lg transition-transform transform hover:scale-105"
-                    >
-                        <a href={project.link} aria-current={true}>
-                            <img
-                                className="w-full h-48 object-cover"
-                                src={project.image}
-                                alt={project.subtitle}
-                            />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2">{project.title}</div>
-                                <p className="text-gray-700 text-base">
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    {projectList().map((project, index) => (
+                        <div
+                            key={project.keyList || index}
+                            className="neo-card bg-white group hover:-translate-y-2 transition-transform p-0 overflow-hidden"
+                        >
+                            <div className="border-b-4 border-black overflow-hidden h-52">
+                                <img
+                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                    src={project.image}
+                                    alt={project.subtitle}
+                                />
+                            </div>
+                            <div className="p-6 space-y-4">
+                                <div className="inline-block bg-neo-yellow px-3 py-1 border-2 border-black text-xs font-black uppercase">
+                                    {project.category}
+                                </div>
+                                <h3 className="text-2xl font-black uppercase leading-none">{project.title}</h3>
+                                <p className="text-md font-medium text-gray-800 line-clamp-3">
                                     {project.description}
                                 </p>
+                                <a 
+                                    href={project.link} 
+                                    className="neo-button bg-neo-blue inline-block w-full text-center uppercase text-sm"
+                                >
+                                    View Project
+                                </a>
                             </div>
-                            <div className="px-6 pt-4 pb-2">
-                            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                                {project.category}
-                            </span>
-                            </div>
-                        </a>
-                    </div>
-                ))}
+                        </div>
+                    ))}
+                </div>
             </div>
-
         </section>
     )
 }

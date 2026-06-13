@@ -2,19 +2,23 @@ import {resumeDownloader} from "../../../helper/ResumeDownloader.js";
 
 export default function ContactResumeDescription() {
     return (
-        <div id="/resume" className="flex flex-col items-center mt-20 sm:mt-32 lg:mt-40">
-            <div className="mb-80 mt-80 w-full max-w-3xl px-4 sm:px-8 lg:px-16">
-                <h1 className="text-center font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-700 mb-6">
-                    Hey there, I Have a Resume
-                </h1>
+        <section id="resume" className="py-32 px-6 bg-neo-pink border-t-4 border-black">
+            <div className="max-w-4xl mx-auto neo-card bg-white text-center space-y-10">
+                <h2 className="text-5xl font-black uppercase tracking-tighter">
+                    Need my <span className="bg-neo-blue px-2 border-4 border-black inline-block transform -rotate-1">Resume</span>?
+                </h2>
+                <p className="text-2xl font-bold">
+                    I've prepared a detailed document of my experiences and skills just for you.
+                </p>
                 <div className="flex justify-center">
-                    <button onClick={resumeDownloader}
-                            className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow hover:bg-blue-600 transition">
-                        Download here
+                    <button 
+                        onClick={resumeDownloader}
+                        className="neo-button bg-neo-yellow text-2xl uppercase tracking-widest py-4 px-10"
+                    >
+                        Download Resume
                     </button>
                 </div>
             </div>
-        </div>
-
+        </section>
     )
 }

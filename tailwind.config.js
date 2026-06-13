@@ -5,26 +5,30 @@ export default {
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            boxShadow: {
+                'neo': '4px 4px 0px 0px rgba(0,0,0,1)',
+                'neo-lg': '8px 8px 0px 0px rgba(0,0,0,1)',
+            },
+            borderWidth: {
+                '4': '4px',
+                '8': '8px',
+            },
+            colors: {
+                'neo-yellow': '#F4E06D',
+                'neo-pink': '#FF9494',
+                'neo-blue': '#8CC0DE',
+                'neo-green': '#A7D2CB',
+                'neo-white': '#FFFBEB',
+                'neo-bg': '#FEF9EF',
+            },
+            fontFamily: {
+                'body': [
+                    'Poppins',
+                    'sans-serif',
+                ],
+            },
+        },
     },
-    fontFamily: {
-        'body': [
-            'Inter',
-            'ui-sans-serif',
-            'system-ui',
-            '-apple-system',
-            'system-ui',
-            'Segoe UI',
-            'Roboto',
-            'Helvetica Neue',
-            'Arial',
-            'Noto Sans',
-            'sans-serif',
-            'Apple Color Emoji',
-            'Segoe UI Emoji',
-            'Segoe UI Symbol',
-            'Noto Color Emoji'
-        ],
-        plugins: [],
-    }
+    plugins: [],
 }

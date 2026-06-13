@@ -1,24 +1,60 @@
-import { ReactTyped } from "react-typed"
+import React from 'react';
 
-const AboutDescription = () => {
-    return (
-        <div id="about"
-            className="bg-white dark:bg-white gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6 mt-52 mb-52">
-            <div>
-                <div className="font-light text-black text-2xl sm:text-lg dark:text-gray-400 mb-8">
-                    <h2 className="mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold text-black dark:text-black">
-                        Hi,Emmanuel Krishnandito Laksana is here
-                    </h2>
-                    <p className="mb-4 dark:text-black  title-font sm:text-4xl text-2xl font-semibold text-black ">
-                        Mobile Enthusiast;
-                    </p>
-                    <p className="mb-2  text-xl leading-relaxed  text-black">
-                        <ReactTyped strings={["Hello Everyone,I'm Dito from Universitas Sanata Dharma.Nice to meet you guys.Well , i'am currently explore all about backend things!!!."]} typeSpeed={50} loop />
-                    </p>
-                </div>
-            </div>
+const AboutSection = () => {
+  const manifesto = [
+    {
+      number: '01',
+      title: 'Mobile Enthusiast',
+      description: 'Passionate about building seamless mobile experiences that bridge the gap between imagination and reality.'
+    },
+    {
+      number: '02',
+      title: 'Backend Explorer',
+      description: 'Currently deep-diving into the architectural world of backend systems, ensuring robust and scalable foundations.'
+    },
+    {
+      number: '03',
+      title: 'Lifelong Learner',
+      description: 'Studying at Universitas Sanata Dharma, constantly evolving with the ever-changing tech landscape.'
+    }
+  ];
+
+  return (
+    <div id="about" className="py-20 px-6 max-w-7xl mx-auto space-y-24">
+      {/* Hero Section of About */}
+      <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="space-y-8">
+          <h2 className="text-6xl md:text-8xl font-black tracking-tighter leading-none uppercase">
+            Hi, I'm <span className="bg-neo-yellow px-2 border-4 border-black inline-block transform -rotate-2">Dito</span>
+          </h2>
+          <p className="text-2xl md:text-3xl font-bold leading-tight max-w-xl">
+            Emmanuel Krishnandito Laksana. A software developer focused on crafting impactful digital solutions.
+          </p>
         </div>
-    )
-}
+        
+        <div className="neo-card bg-neo-blue transform rotate-1">
+          <h3 className="text-3xl font-black mb-4 uppercase">My Mission</h3>
+          <p className="text-xl font-medium leading-relaxed">
+            I believe in building software that is not just functional, but sustainable and accessible. My approach is rooted in clean code, purposeful design, and a relentless drive to solve complex problems through technology.
+          </p>
+        </div>
+      </div>
 
-export default AboutDescription
+      {/* Manifesto Section */}
+      <div className="grid md:grid-cols-3 gap-8">
+        {manifesto.map((item, index) => (
+          <div 
+            key={index} 
+            className={`neo-card ${index === 1 ? 'bg-neo-pink' : index === 2 ? 'bg-neo-green' : 'bg-white'} transform transition-transform hover:-translate-y-2`}
+          >
+            <span className="text-5xl font-black opacity-20 block mb-4">{item.number}</span>
+            <h4 className="text-2xl font-black mb-4 uppercase">{item.title}</h4>
+            <p className="text-lg font-medium">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default AboutSection;

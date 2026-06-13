@@ -1,26 +1,31 @@
+import React from 'react';
+
 const DescriptionContent = () => {
     return (
-        <section className="bg-white dark:bg-white">
-            <div
-                className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6 mt-52 mb-52">
-                <div>
-                    <div className="font-light text-black sm:text-lg dark:text-gray-400 mb-8">
-                        <h2 className="mb-4 text-3xl sm:text-4xl tracking-tight font-extrabold text-black dark:text-black">
-                            Short Introduction again :)
-                        </h2>
-                        <p className="mb-4 dark:text-black font-normal">
-                            Majoring Informatics with System Development as my concentration
+        <section id="content" className="py-20 px-6 bg-neo-bg">
+            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+                <div className="space-y-8">
+                    <h2 className="text-5xl font-black uppercase tracking-tighter">
+                        Short Introduction <br />
+                        <span className="bg-neo-pink px-2 border-4 border-black">again :)</span>
+                    </h2>
+                    <div className="neo-card bg-white space-y-4">
+                        <p className="text-xl font-bold">
+                            Majoring Informatics with System Development as my concentration.
                         </p>
-                        <p className="mb-4 dark:text-black font-normal">
-                            As Informatics student, I have a curiosity in system development.
-                            Hope someday I can mix them together xD
+                        <p className="text-lg font-medium leading-relaxed">
+                            As an Informatics student, I have a deep curiosity for system development. 
+                            My goal is to bridge the gap between architectural robustness and user-centric design.
+                            Hope someday I can mix them together!
                         </p>
                     </div>
                 </div>
-                <div className="flex flex-col items-center lg:items-end">
-                    <div className="mb-8">
+                
+                <div className="relative group">
+                    <div className="absolute inset-0 bg-black translate-x-4 translate-y-4 rounded-none"></div>
+                    <div className="relative border-4 border-black bg-neo-blue p-2">
                         <img
-                            className="w-full h-auto max-w-xs sm:max-w-sm lg:max-w-md rounded-lg"
+                            className="w-full h-auto object-cover border-4 border-black"
                             src="https://github.com/user-attachments/assets/6ba2e32a-8688-4e2b-be46-a225408358e5"
                             alt="dito image"
                         />
