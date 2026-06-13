@@ -2,7 +2,14 @@ import javalogo from '../../assets/img_java.png'
 import kotlinlogo from '../../assets/img_kotlin.png'
 import pythonlogo from '../../assets/img_py.png'
 
-const SkillsList = [
+export interface Skill {
+    id: number;
+    name: string;
+    est: number;
+    src?: any; // StaticImageData or string depending on import
+}
+
+const SkillsList: Skill[] = [
     {
         id: 1,
         name: "Java",

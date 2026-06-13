@@ -1,4 +1,4 @@
-import ProjectContent from "./ProjectContent.jsx";
+import ProjectContent from "./ProjectContent";
 
 export default function ProjectSection() {
     return (
