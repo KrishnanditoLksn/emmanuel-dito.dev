@@ -1,3 +1,5 @@
+"use client";
+
 import {resumeDownloader} from "../../../helper/ResumeDownloader.js";
 
 export default function ContactResumeDescription() {
