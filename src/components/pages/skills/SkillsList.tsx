@@ -1,4 +1,4 @@
-import SkillsData from "../../data/SkillsData.jsx";
+import SkillsData, { Skill } from "../../data/SkillsData";
 
 const SkillList = () => {
     return (
@@ -11,7 +11,7 @@ const SkillList = () => {
                 </div>
                 
                 <div className="flex flex-wrap justify-center gap-8">
-                    {SkillsData.map((skill) => (
+                    {SkillsData.map((skill: Skill) => (
                         <div 
                             key={skill.name} 
                             className="neo-card bg-white w-40 h-40 flex flex-col items-center justify-center space-y-4 hover:bg-neo-blue transition-colors group"

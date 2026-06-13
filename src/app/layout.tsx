@@ -12,7 +12,7 @@ export const metadata = {
   description: "Emmanuel Krishnandito Laksana Portfolio",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={poppins.variable}>
       <body className="bg-neo-bg text-black font-body antialiased">

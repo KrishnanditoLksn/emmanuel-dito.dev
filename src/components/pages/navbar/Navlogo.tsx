@@ -1,4 +1,4 @@
-import Logo from "../../ui/logo/Logo.jsx";
+import Logo from "../../ui/logo/Logo";
 
 const Navlogo = () => {
     return (

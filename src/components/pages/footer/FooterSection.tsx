@@ -1,4 +1,4 @@
-import {FooterContent} from "./FooterContent.jsx";
+import {FooterContent} from "./FooterContent";
 
 export const FooterSection = () => {
     return (

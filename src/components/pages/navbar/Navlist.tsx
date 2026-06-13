@@ -3,7 +3,7 @@
 import {useState} from "react";
 import {AiOutlineClose} from "react-icons/ai";
 import {GiHamburgerMenu} from "react-icons/gi";
-import NavigationList from "../../ui/navigation/NavigationList.jsx";
+import NavigationList from "../../ui/navigation/NavigationList";
 
 const Navlist = () => {
     const [isOpen, setIsOpen] = useState(false)

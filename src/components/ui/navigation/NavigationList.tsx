@@ -2,7 +2,13 @@
 
 import {Link} from "react-scroll";
 
-export default function NavigationList({divClassName, navClassName, hrefClassName}) {
+interface NavigationListProps {
+    divClassName?: string;
+    navClassName?: string;
+    hrefClassName?: string;
+}
+
+export default function NavigationList({ divClassName, navClassName, hrefClassName }: NavigationListProps) {
     return (
         <nav className={navClassName}>
             <div className={divClassName}>

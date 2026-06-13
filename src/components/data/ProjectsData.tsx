@@ -1,4 +1,14 @@
-const projectList = () => [
+export interface Project {
+    keyList: number;
+    title: string;
+    subtitle: string;
+    description: string;
+    image: string;
+    link: string;
+    category: string;
+}
+
+const projectList = (): Project[] => [
     {
         keyList: 1,
         title: "Arxi.vinder",

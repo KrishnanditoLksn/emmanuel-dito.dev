@@ -1,4 +1,4 @@
-import projectList from "../../data/ProjectsData.jsx";
+import projectList, { Project } from "../../data/ProjectsData";
 
 export default function ProjectContent() {
     return (
@@ -12,7 +12,7 @@ export default function ProjectContent() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    {projectList().map((project, index) => (
+                    {projectList().map((project: Project, index: number) => (
                         <div
                             key={project.keyList || index}
                             className="neo-card bg-white group hover:-translate-y-2 transition-transform p-0 overflow-hidden"
