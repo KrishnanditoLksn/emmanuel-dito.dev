@@ -18,27 +18,27 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
   }
 
   return (
-    <div className="min-h-screen bg-neo-bg py-20 px-6">
-      <div className="max-w-5xl mx-auto space-y-20">
+    <div className="min-h-screen bg-neo-bg py-12 md:py-20 px-4 md:px-6">
+      <div className="max-w-5xl mx-auto space-y-12 md:space-y-20">
         {/* Breadcrumb */}
-        <Link href="/projects" className="neo-button bg-white text-xs font-black uppercase inline-block mb-4">
+        <Link href="/projects" className="neo-button bg-white text-[10px] md:text-xs font-black uppercase inline-block mb-2 md:mb-4">
           ← Back to Projects
         </Link>
 
         {/* Hero Section: Judul & Ringkasan Repo */}
-        <div className="space-y-10">
-          <div className="space-y-4">
-            <div className="inline-block bg-neo-yellow px-4 py-1 border-4 border-black text-xs font-black uppercase transform -rotate-1">
+        <div className="space-y-8 md:space-y-10">
+          <div className="space-y-4 md:space-y-6">
+            <div className="inline-block bg-neo-yellow px-4 py-1 border-2 md:border-4 border-black text-[10px] md:text-xs font-black uppercase transform -rotate-1">
               {project.category}
             </div>
-            <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none">
               {project.title}
             </h1>
           </div>
           
-          <div className="border-l-8 border-black pl-8 max-w-4xl">
-            <h2 className="text-xs font-black uppercase text-gray-500 mb-2 tracking-[0.2em]">Ringkasan Repo</h2>
-            <p className="text-2xl md:text-3xl font-bold leading-tight text-black">
+          <div className="border-l-4 md:border-l-8 border-black pl-4 md:pl-8 max-w-4xl">
+            <h2 className="text-[10px] md:text-xs font-black uppercase text-gray-500 mb-2 tracking-[0.2em]">Ringkasan Repo</h2>
+            <p className="text-xl md:text-3xl font-bold leading-tight text-black">
               {project.description}
             </p>
           </div>
@@ -46,8 +46,8 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
         {/* Main Image */}
         <div className="relative">
-          <div className="absolute inset-0 bg-black translate-x-4 translate-y-4"></div>
-          <div className="relative border-4 border-black overflow-hidden bg-white aspect-video">
+          <div className="absolute inset-0 bg-black translate-x-2 translate-y-2 md:translate-x-4 md:translate-y-4"></div>
+          <div className="relative border-2 md:border-4 border-black overflow-hidden bg-white aspect-video">
             <img 
               src={project.image} 
               alt={project.title} 
@@ -57,15 +57,15 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         </div>
 
         {/* Content Section */}
-        <div className="grid lg:grid-cols-3 gap-16 items-start">
+        <div className="grid lg:grid-cols-3 gap-12 lg:gap-16 items-start">
           {/* Main Description (Overview) */}
-          <div className="lg:col-span-2 space-y-12">
-            <section className="space-y-6">
-              <h2 className="text-4xl font-black uppercase tracking-tight">
+          <div className="lg:col-span-2 space-y-8 md:space-y-12">
+            <section className="space-y-4 md:space-y-6">
+              <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight">
                 Overview
               </h2>
-              <div className="neo-card bg-white p-8">
-                <p className="text-xl font-medium leading-relaxed text-gray-800 whitespace-pre-line">
+              <div className="neo-card bg-white p-6 md:p-8">
+                <p className="text-lg md:text-xl font-medium leading-relaxed text-gray-800 whitespace-pre-line">
                   {project.longDescription || project.description}
                 </p>
               </div>
@@ -74,15 +74,15 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
           {/* Sidebar: Tech Stack Repo & Info */}
           <aside className="space-y-12">
-            <div className="neo-card bg-neo-blue p-8 space-y-8">
+            <div className="neo-card bg-neo-blue p-6 md:p-8 space-y-6 md:space-y-8">
               <div>
-                <h3 className="text-xs font-black uppercase text-black/60 mb-6 tracking-[0.2em] border-b-2 border-black/20 pb-2">
+                <h3 className="text-[10px] md:text-xs font-black uppercase text-black/60 mb-4 md:mb-6 tracking-[0.2em] border-b-2 border-black/20 pb-2">
                   Tech Stack Repo
                 </h3>
                 {project.techStack && (
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-2 md:gap-3">
                     {project.techStack.map((tech) => (
-                      <span key={tech} className="bg-white border-2 border-black px-3 py-1 text-sm font-black uppercase shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                      <span key={tech} className="bg-white border-2 border-black px-2 md:px-3 py-1 text-xs font-black uppercase shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                         {tech}
                       </span>
                     ))}
@@ -90,20 +90,20 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 )}
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-4 md:space-y-6">
                 <div>
-                  <h4 className="text-xs font-black uppercase text-black/60 mb-2 tracking-[0.2em]">
+                  <h4 className="text-[10px] md:text-xs font-black uppercase text-black/60 mb-1 md:mb-2 tracking-[0.2em]">
                     Platform / Focus
                   </h4>
-                  <p className="text-lg font-black uppercase">{project.subtitle}</p>
+                  <p className="text-base md:text-lg font-black uppercase">{project.subtitle}</p>
                 </div>
 
-                <div className="pt-6">
+                <div className="pt-4 md:pt-6">
                   <a 
                     href={project.link} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="neo-button bg-neo-green w-full block text-center uppercase font-black text-sm py-4"
+                    className="neo-button bg-neo-green w-full block text-center uppercase font-black text-xs md:text-sm py-4"
                   >
                     View Repository
                   </a>
