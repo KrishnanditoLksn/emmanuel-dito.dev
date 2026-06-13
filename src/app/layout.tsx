@@ -1,5 +1,7 @@
 import { Poppins } from "next/font/google";
 import "../index.css";
+import Header from "../components/pages/navbar/Navbar";
+import { FooterSection } from "../components/pages/footer/FooterSection";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -15,8 +17,12 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={poppins.variable}>
-      <body className="bg-neo-bg text-black font-body antialiased">
-        {children}
+      <body className="bg-neo-bg text-black font-body antialiased min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <FooterSection />
       </body>
     </html>
   );

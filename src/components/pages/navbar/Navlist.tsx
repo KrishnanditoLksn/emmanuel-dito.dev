@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {useState} from "react";
 import {AiOutlineClose} from "react-icons/ai";
 import {GiHamburgerMenu} from "react-icons/gi";
@@ -13,9 +14,9 @@ const Navlist = () => {
     return (
         <header className="sticky top-0 z-50 bg-neo-bg border-b-4 border-black py-4">
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-                <div className="neo-button bg-neo-yellow text-xl">
+                <Link href="/" className="neo-button bg-neo-yellow text-xl">
                     Dits Dev
-                </div>
+                </Link>
                 
                 <div className="hidden md:block">
                     <NavigationList 
