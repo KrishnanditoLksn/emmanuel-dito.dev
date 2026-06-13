@@ -2,26 +2,53 @@ import SkillsData, { Skill } from "../../data/SkillsData";
 
 const SkillList = () => {
     return (
-        <section id="skills" className="py-24 px-6">
+        <section id="skills" className="py-24 px-6 bg-neo-bg">
             <div className="max-w-7xl mx-auto space-y-16">
-                <div className="text-center space-y-4">
-                    <h2 className="text-6xl font-black uppercase tracking-tighter">
-                        Technical <span className="bg-neo-yellow px-2 border-4 border-black inline-block transform rotate-1">Skills</span>
+                {/* Section Header */}
+                <div className="space-y-6">
+                    <div className="inline-block bg-neo-yellow px-4 py-1 border-4 border-black text-xs font-black uppercase transform -rotate-1">
+                        What I Know
+                    </div>
+                    <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none">
+                        Technical <span className="underline decoration-8 underline-offset-8 decoration-neo-pink">Skills</span>
                     </h2>
+                    <p className="text-2xl font-bold text-gray-700 max-w-2xl">
+                        A dynamic collection of programming languages and tools I've mastered to build impactful digital solutions.
+                    </p>
                 </div>
                 
-                <div className="flex flex-wrap justify-center gap-8">
+                {/* Skills Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {SkillsData.map((skill: Skill) => (
                         <div 
-                            key={skill.name} 
-                            className="neo-card bg-white w-40 h-40 flex flex-col items-center justify-center space-y-4 hover:bg-neo-blue transition-colors group"
+                            key={skill.id} 
+                            className={`neo-card ${skill.color} p-8 flex flex-col space-y-6 transition-transform hover:-translate-y-4 hover:rotate-1`}
                         >
-                            <img 
-                                className="w-16 h-16 object-contain group-hover:scale-110 transition-transform" 
-                                src={skill.src} 
-                                alt={skill.name} 
-                            />
-                            <h3 className="text-lg font-black uppercase tracking-tight">{skill.name}</h3>
+                            <div className="flex justify-between items-start">
+                                {skill.src ? (
+                                    <img 
+                                        className="w-16 h-16 object-contain border-4 border-black bg-white p-2" 
+                                        src={skill.src} 
+                                        alt={skill.name} 
+                                    />
+                                ) : (
+                                    <div className="w-16 h-16 border-4 border-black bg-white flex items-center justify-center text-2xl font-black">
+                                        {skill.name[0]}
+                                    </div>
+                                )}
+                                <span className="bg-white border-2 border-black px-2 py-1 text-xs font-black uppercase">
+                                    EST {skill.est}
+                                </span>
+                            </div>
+
+                            <div className="space-y-4">
+                                <h3 className="text-3xl font-black uppercase tracking-tight border-b-4 border-black pb-2 inline-block">
+                                    {skill.name}
+                                </h3>
+                                <p className="text-lg font-bold leading-tight">
+                                    {skill.description}
+                                </p>
+                            </div>
                         </div>
                     ))}
                 </div>

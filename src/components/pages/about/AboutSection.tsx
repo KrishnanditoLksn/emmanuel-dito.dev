@@ -45,7 +45,7 @@ const AboutSection = () => {
         {manifesto.map((item, index) => (
           <div 
             key={index} 
-            className={`neo-card ${index === 1 ? 'bg-neo-pink' : index === 2 ? 'bg-neo-green' : 'bg-white'} transform transition-transform hover:-translate-y-2`}
+            className={`neo-card ${index === 1 ? 'bg-neo-pink animate-neo-float-reverse' : index === 2 ? 'bg-neo-green animate-neo-float-slow' : 'bg-white animate-neo-float'} transform transition-transform hover:-translate-y-4 hover:rotate-0`}
           >
             <span className="text-5xl font-black opacity-20 block mb-4">{item.number}</span>
             <h4 className="text-2xl font-black mb-4 uppercase">{item.title}</h4>

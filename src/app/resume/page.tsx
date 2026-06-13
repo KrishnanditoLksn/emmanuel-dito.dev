@@ -1,5 +1,5 @@
-import ContactResumeContent from "../../components/pages/contact/ContactResumeContent";
+import ResumePageContent from "../../components/pages/resume/ResumePage";
 
 export default function ResumePage() {
-    return <ContactResumeContent />;
+    return <ResumePageContent />;
 }

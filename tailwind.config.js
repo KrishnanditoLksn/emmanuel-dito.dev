@@ -1,10 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
-        "./index.html",
         "./src/**/*.{js,ts,jsx,tsx}",
-        "./app/**/*.{js,ts,jsx,tsx}",
-        "./src/app/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
         extend: {
@@ -23,6 +20,21 @@ export default {
                 'neo-green': '#A7D2CB',
                 'neo-white': '#FFFBEB',
                 'neo-bg': '#FEF9EF',
+            },
+            animation: {
+                'neo-float': 'float 3s ease-in-out infinite',
+                'neo-float-slow': 'float 5s ease-in-out infinite',
+                'neo-float-reverse': 'float-reverse 4s ease-in-out infinite',
+            },
+            keyframes: {
+                float: {
+                    '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+                    '50%': { transform: 'translateY(-10px) rotate(1deg)' },
+                },
+                'float-reverse': {
+                    '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+                    '50%': { transform: 'translateY(-10px) rotate(-1deg)' },
+                }
             },
             fontFamily: {
                 'body': [

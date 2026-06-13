@@ -1,3 +1,4 @@
+import Link from "next/link";
 import projectList, { Project } from "../../data/ProjectsData";
 
 export default function ProjectContent() {
@@ -32,12 +33,12 @@ export default function ProjectContent() {
                                 <p className="text-md font-medium text-gray-800 line-clamp-3">
                                     {project.description}
                                 </p>
-                                <a 
-                                    href={project.link} 
+                                <Link 
+                                    href={`/projects/${project.slug}`} 
                                     className="neo-button bg-neo-blue inline-block w-full text-center uppercase text-sm"
                                 >
-                                    View Project
-                                </a>
+                                    View Details
+                                </Link>
                             </div>
                         </div>
                     ))}
