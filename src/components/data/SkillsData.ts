@@ -1,6 +1,8 @@
 import javalogo from '../../assets/img_java.png'
 import kotlinlogo from '../../assets/img_kotlin.png'
 import pythonlogo from '../../assets/img_py.png'
+import javascriptlogo from '../../assets/img_javascript.png'
+import typescriptlogo from '../../assets/img_typescript.png'
 
 export interface Skill {
     id: number;
@@ -40,8 +42,17 @@ const SkillsList: Skill[] = [
         id: 4,
         name: "Javascript",
         est: 2023,
+        src: javascriptlogo,
         description: "Crafting interactive web interfaces and modern full-stack applications using React, Next.js, and Node.js.",
         color: "bg-neo-pink"
+    },
+    {
+        id: 5,
+        name: "Typescript",
+        est: 2023,
+        src: typescriptlogo,
+        description: "Enhancing JavaScript development with strong typing for more maintainable and error-free code in complex applications.",
+        color: "bg-neo-white"
     }
 ]
 
