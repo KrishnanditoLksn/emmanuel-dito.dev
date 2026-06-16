@@ -34,3 +34,5 @@ out
 *.njsproj
 *.sln
 *.sw?
+
+/app/generated/prisma

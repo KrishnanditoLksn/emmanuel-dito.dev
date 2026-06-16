@@ -27,8 +27,8 @@ export interface ResumeData {
 export const resumeData: ResumeData = {
     name: "Emmanuel Krishnandito Laksana",
     title: "Informatics Student & Mobile Developer",
-    email: "emmanuel.krishnandito@example.com",
-    linkedin: "linkedin.com/in/emmanuel-krishnandito",
+    email: "mrlaksana99@gmail.com",
+    linkedin: "linkedin .com/in/emmanuel-krishnandito",
     github: "github.com/KrishnanditoLksn",
     location: "Yogyakarta, Indonesia",
     experiences: [
