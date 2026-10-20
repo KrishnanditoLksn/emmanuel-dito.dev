@@ -33,7 +33,23 @@ export const resumeData: ResumeData = {
     github: "github.com/KrishnanditoLksn",
     location: "Yogyakarta, Indonesia",
     experiences: [
-         {
+        {
+            company: "PT Tri Usaha Sejahtera Pratama",
+            role: "IT Engineer",
+            period: "Present",
+            description: "Responsible for IT infrastructure, system engineering, network operations, and troubleshooting to support enterprise business technology.",
+            color: "bg-neo-yellow",
+            techStack: ["IT Infrastructure", "System Engineering", "Hardware & Network", "Troubleshooting"]
+        },
+        {
+            company: "Pijak Academy by IBM",
+            role: "Facilitator",
+            period: "Present",
+            description: "Mentoring and facilitating participants in technology curriculum tracks, digital skills training, and software concepts under IBM programs.",
+            color: "bg-neo-blue",
+            techStack: ["Mentorship", "Technical Facilitation", "IBM Programs", "Tech Education"]
+        },
+        {
             company: "PT. Sistem Integrasi Medika",
             role: "Backend Developer Intern",
             period: "Mar 2026 - Present",

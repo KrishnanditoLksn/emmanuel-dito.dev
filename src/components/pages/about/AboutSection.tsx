@@ -4,6 +4,27 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const AboutSection = () => {
+  const currentExperiences = [
+    {
+      role: 'IT Engineer',
+      company: 'PT Tri Usaha Sejahtera Pratama',
+      period: 'Present',
+      badge: 'Enterprise & Systems',
+      description: 'Handling IT infrastructure, network systems, hardware maintenance, system troubleshooting, and providing dependable tech solutions for business operational continuity.',
+      color: 'bg-neo-yellow',
+      techStack: ['IT Infrastructure', 'Network Systems', 'Hardware', 'Troubleshooting']
+    },
+    {
+      role: 'Facilitator',
+      company: 'Pijak Academy by IBM',
+      period: 'Present',
+      badge: 'Tech Education & Mentorship',
+      description: 'Facilitating and guiding learners through tech training programs, mentoring participants in software fundamentals and IBM curriculum tracks.',
+      color: 'bg-neo-blue',
+      techStack: ['Mentorship', 'Tech Facilitation', 'IBM Curriculum', 'Digital Skills']
+    }
+  ];
+
   const manifesto = [
     {
       number: '01',
@@ -54,6 +75,83 @@ const AboutSection = () => {
           </p>
         </motion.div>
       </div>
+
+      {/* Current Experience Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+        className="space-y-8"
+      >
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b-4 md:border-b-8 border-black pb-4">
+          <div>
+            <span className="bg-neo-pink px-3 py-1 text-xs md:text-sm font-black uppercase tracking-wider border-2 border-black inline-block mb-2 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+              Where I Am Currently Active
+            </span>
+            <h3 className="text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight">
+              Current Experience
+            </h3>
+          </div>
+          <div className="flex items-center gap-2 self-start sm:self-auto bg-neo-green border-2 md:border-4 border-black px-3 md:px-4 py-2 shadow-neo">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-black opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-black"></span>
+            </span>
+            <span className="text-xs md:text-sm font-black uppercase tracking-wider">Active Roles</span>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 items-stretch">
+          {currentExperiences.map((exp, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+              className={`neo-card ${exp.color} p-6 md:p-8 flex flex-col justify-between space-y-6 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-neo-lg`}
+            >
+              <div className="space-y-4">
+                <div className="flex flex-wrap items-center justify-between gap-2 border-b-2 border-black/20 pb-3">
+                  <span className="bg-white border-2 border-black px-2.5 py-1 text-xs font-black uppercase shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                    {exp.badge}
+                  </span>
+                  <span className="bg-black text-white border-2 border-black px-2.5 py-1 text-xs font-black uppercase">
+                    {exp.period}
+                  </span>
+                </div>
+
+                <div>
+                  <h4 className="text-2xl sm:text-3xl font-black uppercase leading-tight">
+                    {exp.role}
+                  </h4>
+                  <p className="text-lg md:text-xl font-black text-black/80 mt-1">
+                    {exp.company}
+                  </p>
+                </div>
+
+                <p className="text-base md:text-lg font-medium leading-relaxed text-black/90">
+                  {exp.description}
+                </p>
+              </div>
+
+              <div className="pt-2">
+                <div className="flex flex-wrap gap-2">
+                  {exp.techStack.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="bg-white border-2 border-black px-2.5 py-1 text-xs font-black uppercase shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
 
       {/* Manifesto Section */}
       <div className="grid md:grid-cols-3 gap-8">

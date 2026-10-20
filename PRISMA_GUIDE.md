@@ -4,9 +4,8 @@ Dokumen ini menjelaskan alur kerja (flow) penggunaan Prisma dalam proyek ini, mu
 
 ## 1. Setup & Konfigurasi
 
-Prisma menggunakan dua file utama untuk konfigurasi:
-- `prisma/schema.prisma`: Tempat mendefinisikan model database.
-- `prisma.config.ts`: Konfigurasi runtime (URL database, lokasi output client, dll).
+Prisma menggunakan file utama untuk konfigurasi:
+- `prisma/schema.prisma`: Tempat mendefinisikan model database dan konfigurasi datasource/generator.
 - `.env`: Menyimpan variabel lingkungan seperti `DATABASE_URL`.
 
 ### Instalasi Dependensi
